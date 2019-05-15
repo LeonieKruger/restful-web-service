@@ -16,6 +16,7 @@ public class UserResource {
     @Autowired
     private UserDaoService service;
 
+
     //retrieve all users - GET /users
 
     @GetMapping("/users")
