@@ -4,10 +4,12 @@ import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 
 @Entity
 public class User {
@@ -65,6 +67,17 @@ public class User {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+    
+//    @OneToMany(targetEntity=Post.class, mappedBy="user")
+//    private List<Post> posts;
+//
+//	public List<Post> getPosts() {
+//		return posts;
+//	}
+//
+//	public void setPosts(List<Post> posts) {
+//		this.posts = posts;
+//	}
 
 
 }
