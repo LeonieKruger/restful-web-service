@@ -1,12 +1,26 @@
 package com.in28minutes.rest.webservices.restfulwebservices.user;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.Iterator;
 
+@Entity
 public class User {
-private int id;
-private String name;
-private Date birthDate;
+    private int id;
 
+    @Size(min=2, message="Name should have at least two characters")
+    private String name;
+
+    @Past
+    private Date birthDate;
+
+    @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }
@@ -51,4 +65,6 @@ private Date birthDate;
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+
+
 }
