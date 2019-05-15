@@ -3,15 +3,15 @@ package com.in28minutes.rest.webservices.restfulwebservices.user;
 import java.util.Date;
 
 public class User {
-private Integer id;
+private int id;
 private String name;
 private Date birthDate;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -25,7 +25,7 @@ private Date birthDate;
     }
 
 
-    public User(Integer id, String name, Date date) {
+    public User(int id, String name, Date date) {
         this.id = id;
         this.name=name;
         this.birthDate=date;
