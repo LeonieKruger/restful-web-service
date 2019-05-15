@@ -1,8 +1,7 @@
 package com.in28minutes.rest.webservices.restfulwebservices.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +19,18 @@ public class UserResource {
     }
 
     //retrieve user by id - GET /users/{id}
+    @GetMapping("/users/{id}")
+    public User retrievUser(@PathVariable int id){
+        return service.findOne(id);
+    }
+
+    //CREATED
+    //input - get details from user
+    //output - return created URI
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user){
+        User saved =service.save(user);
+
+    }
+
 }
